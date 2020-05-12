@@ -1,5 +1,3 @@
-// C
-
 const createAdder = function (x) {
     return function (y) { // takes in y as argument
         return x + y;
