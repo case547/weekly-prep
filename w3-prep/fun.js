@@ -120,7 +120,7 @@ const to = function (gen, end) {
     };
 };
 
-const fromto = function (start, end) {
+const fromTo = function (start, end) {
     return to(
         from(start),
         end
@@ -128,6 +128,12 @@ const fromto = function (start, end) {
 };
 
 const element = function (array, gen) {
+    if (gen === undefined) {
+        gen = fromTo(
+            0,
+            array.length
+        );
+    }
     return function () {
         let i = gen();
         if (i !== undefined) {
@@ -135,3 +141,8 @@ const element = function (array, gen) {
         }
     };
 };
+
+
+// Challenge 5
+
+const collect = function ()
