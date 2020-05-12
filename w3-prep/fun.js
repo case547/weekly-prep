@@ -111,9 +111,9 @@ const from = function (start) {
 
 const to = function (gen, end) {
     return function () {
-        let value = gen();
-        if (value < end) {
-            return value;
+        let val = gen();
+        if (val < end) {
+            return val;
         } else {
             return undefined;
         }
@@ -145,4 +145,25 @@ const element = function (array, gen) {
 
 // Challenge 5
 
-const collect = function ()
+const collect = function (gen, array) {
+    return function () {
+        let val = gen();
+        if (val !== undefined) {
+            array.push(val);
+        }
+        return val;
+    };
+};
+
+const filter = function (gen, pred) {
+    return function () {
+        let val = gen();
+        if (pred(val) === true) {
+            return val;
+        }
+    };
+};
+
+const third = function (val) {
+    return (val % 3) === 0;
+};
