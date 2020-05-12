@@ -56,3 +56,66 @@ let inc_1 = addf(1);
 let inc_2 = liftf(add)(1);
 
 let inc_3 = curry(add, 1);
+
+
+// Function Challenge 3
+
+const twice = function (f) {
+    return function (a) {
+        return f(a, a);
+    };
+};
+
+const reverse = function (f) {
+    return function (a, b) {
+        return f(b, a);
+    };
+};
+// Alternatively:
+/* const reverse = function (f) {
+    return function (...args) {
+        return f(...args.reverse());
+    };
+} */
+
+const composeu = function (f, g) {
+    return function (a) {
+        return g(f(a));
+    };
+};
+
+const composeb = function (f, g) {
+    return function (a, b, c) {
+        return g(f(a, b), c);
+    };
+};
+
+const limit = function (f, count) {
+    return function (a, b) {
+        if (count >= 1) {
+            count -= 1;
+            return f(a, b);
+        } else {
+            return undefined;
+        }
+    };
+};
+
+const from = function (start) {
+    return function () {
+        let next = start;
+        start += 1;
+        return next;
+    };
+};
+
+const t = function (gen, end) {
+    return function () {
+        let value = gen();
+        if (value < end) {
+            return value;
+        } else {
+            return undefined;
+        }
+    };
+};
