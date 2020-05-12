@@ -109,13 +109,29 @@ const from = function (start) {
     };
 };
 
-const t = function (gen, end) {
+const to = function (gen, end) {
     return function () {
         let value = gen();
         if (value < end) {
             return value;
         } else {
             return undefined;
+        }
+    };
+};
+
+const fromto = function (start, end) {
+    return to(
+        from(start),
+        end
+    );
+};
+
+const element = function (array, gen) {
+    return function () {
+        let i = gen();
+        if (i !== undefined) {
+            return array[i];
         }
     };
 };
