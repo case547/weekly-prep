@@ -1,12 +1,14 @@
 // While loop
 let i = 0;
-while (true) {
-    i += 1;
-    if (i >= 101) {
-        break; // same as while i < 101
+const loop = function () {
+    while (true) {
+        i += 1;
+        if (i >= 101) {
+            break; // same as while i < 101
+        }
+        console.log(i);
     }
-    console.log(i);
-}
+};
 
 //Array methods:
 
