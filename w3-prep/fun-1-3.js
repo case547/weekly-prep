@@ -95,8 +95,7 @@ const limit = function (f, count) {
         if (count >= 1) {
             count -= 1;
             return f(a, b);
-        } else {
-            return undefined;
         }
+        return undefined;
     };
 };

@@ -8,24 +8,13 @@ const from = function (start) {
     };
 };
 
-/* const to = function (gen, end) {
-    return function () {
-        if (gen() < end) {
-            return gen();
-        } else {
-            return undefined;
-        }
-    };
-}; */
-
 const to = function (gen, end) {
     return function () {
         let val = gen();
         if (val < end) {
             return val;
-        } else {
-            return undefined;
         }
+        return undefined;
     };
 };
 
