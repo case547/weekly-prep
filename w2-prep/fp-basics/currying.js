@@ -1,4 +1,4 @@
-// Fill in what hass been given until all arguments satisfied
+// Fill in what has been given until all arguments satisfied
 
 const add = (x) => (y) => x + y;
 // Takes x, then returns function that takes in y; takes y, then maps x + y
