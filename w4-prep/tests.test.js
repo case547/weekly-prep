@@ -1,3 +1,4 @@
+import module from "./test-funcs.js";
 import * as fc from "fast-check"
 
 // const describe = window.describe;
