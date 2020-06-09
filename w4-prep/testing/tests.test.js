@@ -1,5 +1,5 @@
 import module from "./test-funcs.js";
-import * as fc from "fast-check"
+import * as fc from "./node_modules/fast-check"
 
 // const describe = window.describe;
 // const it = window.it;
