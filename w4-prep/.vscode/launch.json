@@ -1,28 +1,18 @@
 {
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
-            "name": "fx-dev debug",
-            "type": "firefox",
+            "type": "node",
             "request": "launch",
-            "reAttach": true,
-            "reloadOnAttach": true,
-            "file": "${fileDirname}/index.html",
-            "preferences": {
-                "security.file.uri.strict_origin_policy": false
-            }
-        },
-        {
-            "name": "Mocha Tests",
-            "type": "firefox",
-            "request": "launch",
-            "reAttach": true,
-            "reloadOnAttach": true,
-            "file": "${fileDirname}/test.html",
-            "preferences": {
-                "security.fileuri.strict_origin_policy": false
-            }
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${file}"
         }
     ]
-  }
-  
+}

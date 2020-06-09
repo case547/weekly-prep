@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "fx-dev debug",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "reloadOnAttach": true,
+            "file": "${fileDirname}/index.html",
+            "preferences": {
+                "security.file.uri.strict_origin_policy": false
+            }
+        },
+        {
+            "name": "Mocha Tests",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "reloadOnAttach": true,
+            "file": "${fileDirname}/test.html",
+            "preferences": {
+                "security.fileuri.strict_origin_policy": false
+            }
+        }
+    ]
+  }
+  
