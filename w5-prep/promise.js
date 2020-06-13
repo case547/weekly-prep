@@ -22,6 +22,8 @@
 let wordnikAPI = "https://api.wordnik.com/v4/words.json/randomWord";
 let giphyAPI = "http://api.giphy.com/v1/gifs/search";
 
+const fetch = window.fetch;
+
 function setup() {
     noCanvas();
 
